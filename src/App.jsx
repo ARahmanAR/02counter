@@ -9,17 +9,20 @@ function App() {
   const addValue = () => {
     // counter += 1;
     // console.log(counter);
-    chaiCounter(counter + 1);
+    // chaiCounter(counter + 1);
+    chaiCounter((prevCounter) => prevCounter + 1);
+    chaiCounter((prevCounter) => prevCounter + 1);
+    chaiCounter((prevCounter) => prevCounter + 1);
   }
 
   const removeValue = () => {
     if (counter > 0) {
       const newCounter = counter - 1;
       chaiCounter(newCounter);
-      if( newCounter === 10){
+      if (newCounter === 10) {
         alert("Counter value is back to 10");
       }
-    }else {
+    } else {
       alert("Counter value cannot be less than zero");
     }
   }
